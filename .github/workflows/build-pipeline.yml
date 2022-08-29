@@ -44,8 +44,10 @@ jobs:
           FIRST_NAME: Mona
           MIDDLE_NAME: The
           LAST_NAME: Octocat
-      - name: SECRET
-        run: echo "${{secrets.PASSWORD}}"
+      - name: 5SECRET
+        run: echo "$SECRET"
+        env: 
+          SECRET: ${{secrets.PASSWORD}}
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.4
         with:
