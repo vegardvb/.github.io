@@ -38,6 +38,12 @@ jobs:
         # Step 2
       - name: Build
         run: npm run build
+      - name: "Hello world when it's Monday"
+        run: echo "Hello $FIRST_NAME $MIDDLE_NAME $LAST_NAME, today is Monday!"
+        env:
+          FIRST_NAME: Mona
+          MIDDLE_NAME: The
+          LAST_NAME: Octocat
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.4
         with:
